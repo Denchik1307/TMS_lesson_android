@@ -1,14 +1,17 @@
 package den.project.first_lesson_android
 
-enum class DiscountType {
-    FixAmount,
-    RangeAmount;
+sealed class DiscountType() {
 
-    override fun toString(): String {
-        return when (this) {
-            FixAmount -> "Fix"
-            RangeAmount -> "Range"
-        }
-    }
+    data class FixAmount(val value: Int) : DiscountType()
+    data class RangeAmount(val startValue: Int, val endValue: Int) : DiscountType()
+
+    object NoAmount : DiscountType()
+
+//    override fun toString(): String {
+//        return when (this) {
+//            FixAmount -> "Fix"
+//            RangeAmount -> "Range"
+//        }
+//    }
 
 }
