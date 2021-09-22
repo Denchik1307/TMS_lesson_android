@@ -18,16 +18,18 @@ fun main() {
         0, "https",
         DiscountType.FixAmount(1)
     )
-//    disscount.discription = "fasdgahafhafdndfhadfhad"
     disscount.discountType = DiscountType.NoAmount
-    disscount.discountType = DiscountType.RangeAmount(1, 4)
-    disscount.discountType = Hz()
-    print(disscount)
+    println(disscount.discountType.calculate(5))
+    disscount.discountType = DiscountType.RangeAmount(1, 5)
+    println(disscount.discountType.calculate(5))
+    disscount.discountType = DiscountType.FixAmount(2)
+    println(disscount.discountType.calculate(5))
 
-    when (disscount.discountType) {
-        is DiscountType.FixAmount -> TODO()
-        is Hz -> TODO()
-        DiscountType.NoAmount -> TODO()
-        is DiscountType.RangeAmount -> TODO()
-    }
+//    print(disscount00)
+
+//    when (disscount.discountType) {
+//        is DiscountType.FixAmount -> TODO()
+//        DiscountType.NoAmount -> TODO()
+//        is DiscountType.RangeAmount -> TODO()
+//    }
 }

@@ -1,17 +1,16 @@
 package den.project.first_lesson_android
 
-sealed class DiscountType() {
+sealed class DiscountType(val calculate: (Int) -> String) {
 
-    data class FixAmount(val value: Int) : DiscountType()
-    data class RangeAmount(val startValue: Int, val endValue: Int) : DiscountType()
+    data class FixAmount(val value: Int) : DiscountType({
+        (it * value).toString()
+    })
 
-    object NoAmount : DiscountType()
+    data class RangeAmount(val startValue: Int, val endValue: Int) : DiscountType({
+        ((startValue + endValue) / 2 * it).toString()
+    })
 
-//    override fun toString(): String {
-//        return when (this) {
-//            FixAmount -> "Fix"
-//            RangeAmount -> "Range"
-//        }
-//    }
-
+    object NoAmount : DiscountType({
+        "zero"
+    })
 }
