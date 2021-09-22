@@ -10,3 +10,9 @@ class MainActivity : AppCompatActivity() {
     }
 
 }
+
+fun main(){
+    val disscount = Disscount()
+//    disscount.discription = "fasdgahafhafdndfhadfhad"
+    print(disscount.title)
+}
