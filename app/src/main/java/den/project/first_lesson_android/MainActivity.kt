@@ -1,7 +1,7 @@
 package den.project.first_lesson_android
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -11,8 +11,8 @@ class MainActivity : AppCompatActivity() {
 
 }
 
-fun main(){
-    val disscount = Disscount()
+fun main() {
+    val disscount = Disscount("Cat", "The best Cat Discount")
 //    disscount.discription = "fasdgahafhafdndfhadfhad"
-    print(disscount.title)
+    print(disscount)
 }

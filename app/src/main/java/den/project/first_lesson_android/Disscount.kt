@@ -1,28 +1,28 @@
 package den.project.first_lesson_android
 
-import kotlin.io.print as print1
+data class Disscount(
+    var title: String = "",
+    var discription: String = "",
+    var amount: Int = 0,
+    var url: String = ""
+) {
 
-class Disscount {
-    var title: String? = null
-        get() = field?.uppercase()
-    var discription: String? = null
-        set(value) = if (value?.length!! <= 100) {
-            field = value
-        } else {
-            field = value?.substring(0..100)
+    fun getMyTitle() = this.title.uppercase()
+
+    fun setMyDiscription(value: String) = if (value.length <= 100) {
+        this.discription = value
+    } else {
+        this.discription = value?.substring(0..100)
+    }
+
+    fun setMyMounth(value: Int) {
+        this.amount = try {
+            1 / value
+        } catch (exeption: ArithmeticException) {
+            -1
         }
-    var amount: Int? = null
-        set(value) {
-            field = try {
-                if (value != null) {
-                    1 / value
-                } else {
-                    0
-                }
-            } catch (exeption: ArithmeticException) {
-                0
-            }
-        }
-    var url: String? = null
+    }
+
 }
+
 
