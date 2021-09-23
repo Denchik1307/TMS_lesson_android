@@ -20,10 +20,13 @@ fun main() {
     )
     disscount.discountType = DiscountType.NoAmount
     println(disscount.discountType.calculate(5))
+    println(disscount.discountType.calculate(25))
     disscount.discountType = DiscountType.RangeAmount(1, 5)
     println(disscount.discountType.calculate(5))
+    println(disscount.discountType.calculate(25))
     disscount.discountType = DiscountType.FixAmount(2)
     println(disscount.discountType.calculate(5))
+    println(disscount.discountType.calculate(25))
 
 //    print(disscount00)
 

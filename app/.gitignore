@@ -1,1 +1,8 @@
 /build
+/compiler.xml
+/gradle.xml
+/jarRepositories.xml
+/misc.xml
+/vcs.xml
+/dictionaries/Denis.xml
+/modules.xml
