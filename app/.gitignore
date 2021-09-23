@@ -1,4 +1,5 @@
 /build
+/.gradle
 /compiler.xml
 /gradle.xml
 /jarRepositories.xml
@@ -6,3 +7,4 @@
 /vcs.xml
 /dictionaries/Denis.xml
 /modules.xml
+/workspace.xml
