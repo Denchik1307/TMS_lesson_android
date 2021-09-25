@@ -12,27 +12,17 @@ class MainActivity : AppCompatActivity() {
 }
 
 fun main() {
-    val disscount = Discount(
-        "Cat",
-        "The best Cat Discount",
-        0, "https",
-        DiscountType.FixAmount(1)
+
+    val discountCopy = Discount(
+        "New discount",
+        "discount for test",
+        5,
+        "https://pravodeneg.net/wp-content/uploads/2018/11/discounting.jpg",
+        "https://pravodeneg.net/buhuchet/formula-normy-diskonta.html"
     )
-    disscount.discountType = DiscountType.NoAmount
-    println(disscount.discountType.calculate(5))
-    println(disscount.discountType.calculate(25))
-    disscount.discountType = DiscountType.RangeAmount(1, 5)
-    println(disscount.discountType.calculate(5))
-    println(disscount.discountType.calculate(25))
-    disscount.discountType = DiscountType.FixAmount(2)
-    println(disscount.discountType.calculate(5))
-    println(disscount.discountType.calculate(25))
 
-//    print(disscount00)
+    print(discountCopy)
 
-//    when (disscount.discountType) {
-//        is DiscountType.FixAmount -> TODO()
-//        DiscountType.NoAmount -> TODO()
-//        is DiscountType.RangeAmount -> TODO()
-//    }
 }
+
+
